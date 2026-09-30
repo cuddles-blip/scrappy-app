@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Scrappy App — Scrappy Joe's Second Hand</title>
+<meta name="description" content="Fresh finds, deals and events from Scrappy Joe's Second Hand, Oil City PA. No account or sign-up needed.">
+<meta property="og:title" content="The Scrappy App — Scrappy Joe's Second Hand">
+<meta property="og:description" content="Fresh finds, deals and events from Scrappy Joe's. No account or sign-up needed.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://cuddles-blip.github.io/scrappy-app/">
+<meta property="og:image" content="https://cuddles-blip.github.io/scrappy-app/icons/icon-512.png">
+<meta name="twitter:card" content="summary">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="theme-color" content="#b91c1c">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Scrappy App">
+<style>
+  :root { --red:#b91c1c; --red-dark:#7f1d1d; --gold:#b45309; --ink:#1f2937; --muted:#6b7280; --bg:#faf7f2; --card:#ffffff; }
+  * { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; background:var(--bg); color:var(--ink); font-size:18px; line-height:1.5; padding-bottom:92px; }
+  header { background:var(--red); color:#fff; padding:22px 18px 18px; text-align:center; }
+  header h1 { margin:0; font-size:30px; letter-spacing:.5px; }
+  header p { margin:6px 0 0; font-size:16px; opacity:.95; }
+  header .tagline { margin-top:10px; font-weight:800; letter-spacing:1px; font-size:15px; }
+  main { max-width:640px; margin:0 auto; padding:16px 16px 8px; }
+  .tab { display:none; }
+  .tab.active { display:block; }
+  .card { background:var(--card); border-radius:14px; padding:18px; margin:0 0 14px; box-shadow:0 1px 3px rgba(0,0,0,.08); }
+  .kicker { color:var(--red); font-weight:800; font-size:13px; letter-spacing:1.5px; margin:0 0 6px; }
+  .card h2 { margin:0 0 8px; font-size:22px; }
+  .card p { margin:8px 0; }
+  .muted { color:var(--muted); font-size:16px; }
+  .tip { background:#fef3c7; border-left:5px solid var(--gold); border-radius:10px; padding:14px 16px; margin:0 0 14px; font-size:17px; }
+  .bigdeal { text-align:center; }
+  .bigdeal .pct { font-size:64px; font-weight:900; color:var(--red); line-height:1; }
+  .bigdeal .what { font-size:22px; font-weight:700; margin:8px 0; }
+  .btn { display:block; background:var(--red); color:#fff; text-align:center; font-size:20px; font-weight:700; padding:16px; border-radius:14px; text-decoration:none; margin:6px 0 14px; }
+  .btn.tel { background:var(--red-dark); }
+  .hours { width:100%; border-collapse:collapse; margin:8px 0; font-size:18px; }
+  .hours td { padding:8px 4px; border-bottom:1px solid #eee; }
+  .hours td:last-child { text-align:right; font-weight:600; }
+  nav.tabbar { position:fixed; left:0; right:0; bottom:0; background:#fff; border-top:1px solid #e5e7eb; display:flex; padding-bottom:env(safe-area-inset-bottom); z-index:10; }
+  nav.tabbar button { flex:1; border:0; background:none; padding:12px 4px 10px; font-size:15px; font-weight:700; color:var(--muted); cursor:pointer; }
+  nav.tabbar button.active { color:var(--red); }
+  nav.tabbar button .dot { display:block; font-size:22px; margin-bottom:2px; }
+  footer.save { text-align:center; padding:18px 16px 8px; }
+  footer.save a { color:var(--red); font-size:16px; font-weight:600; }
+  #savebox { display:none; }
+  #savebox.open { display:block; }
+  ol.steps { margin:10px 0; padding-left:22px; }
+  ol.steps li { margin:10px 0; font-size:18px; }
+  .warn { color:var(--red); font-weight:700; }
+  .hero { margin:0 0 14px; }
+  .hero img { width:100%; border-radius:14px; display:block; }
+  .hero p { text-align:center; font-weight:800; font-size:20px; margin:10px 0 0; color:var(--red-dark); }
+</style>
+</head>
+<body>
+<header>
+  <h1>The Scrappy App</h1>
+  <p>Fresh finds from Scrappy Joe's Second Hand</p>
+  <div class="tagline">EVERYBODY GOES TO SCRAPPY JOE'S.</div>
+</header>
+
+<main>
+  <!-- FINDS -->
+  <section class="tab active" id="tab-finds">
+    <div class="hero">
+      <img src="images/welcome.jpg" alt="Joe D'Achille and Sue Downing">
+      <p>Joe D'Achille &amp; Sue Downing</p>
+    </div>
+    <div class="tip">One-of-a-kind finds go fast — <a href="tel:+18144939679">call (814) 493-9679</a> to check what's on the shelf today.</div>
+
+    <div class="card">
+      <p class="kicker">JUST IN &middot; HALLOWEEN 2026</p>
+      <h2>Halloween has arrived at Scrappy Joe's</h2>
+      <p>Vintage Halloween d&eacute;cor is landing in booths all over the store. Come dig through it before it's gone.</p>
+    </div>
+
+    <div class="card">
+      <p class="kicker">JULY 2026</p>
+      <h2>The jewelry counter</h2>
+      <p>Vintage pieces, coins &amp; more — new treasures added all the time.</p>
+    </div>
+
+    <div class="card">
+      <h2>The movie &amp; game wall</h2>
+      <p>Dig through the shelves — DVDs, games and surprises.</p>
+    </div>
+
+    <div class="card">
+      <h2>Vintage sign wall</h2>
+      <p>Full of character. A favorite photo spot in the store.</p>
+    </div>
+
+    <div class="card">
+      <p class="kicker">WE BUY</p>
+      <h2>We buy genuine gold, silver, coins &amp; broken jewelry</h2>
+      <p>Bring it by the counter — real gold and silver only.</p>
+    </div>
+  </section>
+
+  <!-- DEALS -->
+  <section class="tab" id="tab-deals">
+    <div class="card bigdeal">
+      <p class="kicker">OCTOBER DEAL OF THE MONTH</p>
+      <div class="pct">10% OFF</div>
+      <p class="what">The entire store on purchases over $100</p>
+      <p class="muted">October 1&ndash;31, 2026 &middot; Just show this screen at the counter.</p>
+    </div>
+    <div class="card">
+      <h2>How it works</h2>
+      <p>Shop like normal. At checkout, show this page on your phone and take 10% off your whole purchase over $100.</p>
+      <p class="muted">Discount covered by the house, so our vendors still get paid in full.</p>
+    </div>
+    <div class="card">
+      <p class="kicker">BOOTH #56 &middot; OCTOBER 1&ndash;31</p>
+      <h2>10% off the entire booth</h2>
+      <p>Show this screen at the counter to take 10% off everything in Booth #56.</p>
+    </div>
+  </section>
+
+  <!-- VISIT -->
+  <section class="tab" id="tab-visit">
+    <div class="card">
+      <p class="kicker">FIND US</p>
+      <h2>The Big Red Building on Seneca Hill</h2>
+      <p>4149 Route 257<br>Oil City, PA 16301</p>
+      <p>60+ local vendors under one roof.</p>
+      <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=4149+Route+257+Oil+City+PA+16301">Get Directions</a>
+    </div>
+    <div class="card">
+      <p class="kicker">HOURS</p>
+      <table class="hours">
+        <tr><td>Monday &ndash; Saturday</td><td>10 AM &ndash; 5 PM</td></tr>
+        <tr><td>Sunday</td><td>10 AM &ndash; 3 PM</td></tr>
+      </table>
+      <a class="btn tel" href="tel:+18144939679">Call (814) 493-9679</a>
+    </div>
+  </section>
+
+  <!-- EVENTS -->
+  <section class="tab" id="tab-events">
+    <div class="card">
+      <p class="kicker">OCTOBER 2&ndash;4</p>
+      <h2>Applefest weekend</h2>
+      <p>In town for the festivities? Swing by the Big Red Building on Seneca Hill — 60+ vendors and fresh finds daily.</p>
+    </div>
+    <div class="card">
+      <p class="kicker">OCTOBER 1&ndash;31</p>
+      <h2>Deal of the Month</h2>
+      <p>10% off the entire store on purchases over $100. See the Deals tab for details.</p>
+    </div>
+  </section>
+
+  <footer class="save">
+    <a href="#" id="savelink">Want this on your home screen? Tap here for the steps &rsaquo;</a>
+    <div class="card" id="savebox" style="text-align:left; margin-top:12px;">
+      <p class="kicker">IPHONE</p>
+      <ol class="steps">
+        <li>Tap the <strong>Share</strong> button (square with an arrow) at the bottom of Safari.</li>
+        <li><strong>Scroll DOWN</strong> and tap <strong>Add to Home Screen</strong>. <span class="warn">Do not tap &ldquo;Options&rdquo; at the top.</span></li>
+        <li>Tap <strong>Add</strong> in the top-right corner.</li>
+      </ol>
+      <p class="kicker">ANDROID</p>
+      <ol class="steps">
+        <li>Tap your browser's menu (&vellip;), then tap <strong>Add to Home screen</strong> or <strong>Install app</strong>.</li>
+      </ol>
+    </div>
+    <div style="margin-top:16px;">
+      <a class="btn" href="scrappy-app-qr-printable.pdf" download>Download printable QR page (PDF)</a>
+    </div>
+  </footer>
+</main>
+
+<nav class="tabbar">
+  <button class="active" data-tab="tab-finds"><span class="dot">&#9733;</span>Finds</button>
+  <button data-tab="tab-deals"><span class="dot">%</span>Deals</button>
+  <button data-tab="tab-visit"><span class="dot">&#8982;</span>Visit</button>
+  <button data-tab="tab-events"><span class="dot">&#128467;</span>Events</button>
+</nav>
+
+<script>
+  document.querySelectorAll('nav.tabbar button').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      document.querySelectorAll('nav.tabbar button').forEach(function (b) { b.classList.remove('active'); });
+      document.querySelectorAll('.tab').forEach(function (t) { t.classList.remove('active'); });
+      btn.classList.add('active');
+      document.getElementById(btn.getAttribute('data-tab')).classList.add('active');
+      window.scrollTo(0, 0);
+    });
+  });
+  document.getElementById('savelink').addEventListener('click', function (e) {
+    e.preventDefault();
+    document.getElementById('savebox').classList.toggle('open');
+  });
+</script>
+<script data-goatcounter="https://scrappyjoes.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
